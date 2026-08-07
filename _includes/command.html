@@ -1,0 +1,19 @@
+<div class="command-block">
+  {% if include.explanation %}
+    <p>{{ include.explanation }}</p>
+  {% endif %}
+
+  <div class="command-row">
+    <code>{{ include.command }}</code>
+
+    <button
+      type="button"
+      class="copy-command"
+      data-command="{{ include.command | escape }}"
+      aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>

@@ -1,0 +1,10 @@
+title: DelftBlue Learning Module
+baseurl: "/delftblue_learning_module"
+url: "https://zulee1711.github.io/delftblue_learning_module"
+
+markdown: kramdown
+theme: minima
+
+header_pages:
+  - index.md
+  - modules/login.md
