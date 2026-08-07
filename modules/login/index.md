@@ -28,10 +28,10 @@ You need:
 - Access to the TU Delft network or eduVPN
 - An SSH client
 
-{% include platform-selector.html %}
-
 ### Check your network connection
 
 When you are on campus, connect through the TU Delft network.
 
 When you are off campus, connect to the TU Delft network using [eduVPN](https://www.tudelft.nl/en/student/my-study-me/study-tools/remote-services) through **Institute Access**.
+
+{% include platform-selector.html %}
