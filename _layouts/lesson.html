@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/course.css' | relative_url }}"
+>
+
+<main class="course-container">
+
+  <nav class="course-breadcrumb">
+    <a href="{{ '/' | relative_url }}">DelftBlue Learning Modules</a>
+    <span> / </span>
+    <span>{{ page.title }}</span>
+  </nav>
+
+  <article class="lesson-content">
+    {{ content }}
+  </article>
+
+</main>
+
+<script src="{{ '/assets/js/course.js' | relative_url }}"></script>
