@@ -1,0 +1,44 @@
+<section class="question-block statement-question"
+         data-correct="{{ include.correct }}">
+
+  <div class="question-label">
+    Quick check
+  </div>
+
+  <h3>{{ include.question }}</h3>
+
+  <div class="question-options">
+
+    <label>
+      <input type="radio"
+             name="{{ include.id }}"
+             value="yes">
+      Yes
+    </label>
+
+    <label>
+      <input type="radio"
+             name="{{ include.id }}"
+             value="no">
+      No
+    </label>
+
+  </div>
+
+  <button type="button" class="check-question">
+    Check
+  </button>
+
+  <div class="question-feedback"
+       aria-live="polite">
+
+    <div class="feedback-correct">
+      {{ include.correct_feedback }}
+    </div>
+
+    <div class="feedback-incorrect">
+      {{ include.incorrect_feedback }}
+    </div>
+
+  </div>
+</section>

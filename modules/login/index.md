@@ -23,9 +23,27 @@ By the end of this module, you will be able to:
 You need:
 
 - An active TU Delft NetID
-- Permission to access DelftBlue (request via [DelftBlue Access Request Form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=5eecdac603ab4ca896e162836a215d64))
 - An internet connection
+- Permission to access DelftBlue
+
+{% include questions/statement.html
+   id="account-check"
+   question="I already have DelftBlue access, or I have requested it."
+   correct="yes"
+   correct_feedback="Great. You can continue with the connection steps."
+   incorrect_feedback="Request DelftBlue access before continuing with this tutorial (request via [DelftBlue Access Request Form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=5eecdac603ab4ca896e162836a215d64))"
+%}
+
 - Access to the TU Delft network or eduVPN
+
+{% include questions/statement.html
+   id="vpn-check"
+   question="I have access to the TU Delft network or eduVPN."
+   correct="yes"
+   correct_feedback="Great. You can continue with the connection steps."
+   incorrect_feedback="You need to connect to the TU Delft network or eduVPN before accessing DelftBlue."
+%}
+
 - An SSH client
 
 ### Check your network connection

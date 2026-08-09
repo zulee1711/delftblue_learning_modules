@@ -36,13 +36,13 @@ Try it
 
 Replace `<netid>` with your TU Delft NetID.
 
-For example, if your NetID is `jstudent`, enter:
-
-```bash
-ssh jstudent@login.delftblue.tudelft.nl
-```
-
-Then press Enter.
+{% include questions/fill-command.html
+   question="Complete the command using `jstudent` as the NetID."
+   prefix="ssh "
+   suffix="@login.delftblue.tudelft.nl"
+    answer="jstudent"
+    input_label="NetID"
+%}
 
 ## Step 4: Confirm the host
 
@@ -138,6 +138,20 @@ Finally, run:
 {% include command.html command="pwd" %}
 
 The output should be your home directory, for example `/home/<netid>`.
+
+{% include questions/match.html
+   question="What does each part of this DelftBlue prompt mean?"
+   description="Match each part of [jstudent@login04 ~]$ to its meaning."
+   item_1="jstudent"
+   item_2="login04"
+   item_3="~"
+   option_a="Your TU Delft NetID"
+   option_b="The DelftBlue login node"
+   option_c="Your home directory"
+   answer_1="a"
+   answer_2="b"
+   answer_3="c"
+%}
 
 ## Step 8: Log out safely
 

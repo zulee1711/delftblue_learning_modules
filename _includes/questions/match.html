@@ -1,0 +1,120 @@
+<section class="question-block match-question">
+
+  <div class="question-label">
+    Match
+  </div>
+
+  <h3>{{ include.question }}</h3>
+
+  {% if include.description %}
+    <p>{{ include.description }}</p>
+  {% endif %}
+
+  <div class="match-grid">
+
+    <div class="match-row"
+         data-answer="{{ include.answer_1 }}">
+
+      <code class="match-item">
+        {{ include.item_1 | escape }}
+      </code>
+
+      <select class="match-select"
+              aria-label="Match {{ include.item_1 | escape }}">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          {{ include.option_a }}
+        </option>
+
+        <option value="b">
+          {{ include.option_b }}
+        </option>
+
+        <option value="c">
+          {{ include.option_c }}
+        </option>
+
+      </select>
+
+      <span class="match-result"
+            aria-live="polite"></span>
+
+    </div>
+
+
+    <div class="match-row"
+         data-answer="{{ include.answer_2 }}">
+
+      <code class="match-item">
+        {{ include.item_2 | escape }}
+      </code>
+
+      <select class="match-select"
+              aria-label="Match {{ include.item_2 | escape }}">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          {{ include.option_a }}
+        </option>
+
+        <option value="b">
+          {{ include.option_b }}
+        </option>
+
+        <option value="c">
+          {{ include.option_c }}
+        </option>
+
+      </select>
+
+      <span class="match-result"
+            aria-live="polite"></span>
+
+    </div>
+
+
+    <div class="match-row"
+         data-answer="{{ include.answer_3 }}">
+
+      <code class="match-item">
+        {{ include.item_3 | escape }}
+      </code>
+
+      <select class="match-select"
+              aria-label="Match {{ include.item_3 | escape }}">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          {{ include.option_a }}
+        </option>
+
+        <option value="b">
+          {{ include.option_b }}
+        </option>
+
+        <option value="c">
+          {{ include.option_c }}
+        </option>
+
+      </select>
+
+      <span class="match-result"
+            aria-live="polite"></span>
+
+    </div>
+
+  </div>
+
+  <button type="button"
+          class="check-match">
+    Check answers
+  </button>
+
+  <p class="match-feedback"
+     aria-live="polite"></p>
+
+</section>

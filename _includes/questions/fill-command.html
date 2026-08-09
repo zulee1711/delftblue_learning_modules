@@ -1,0 +1,31 @@
+<section class="question-block fill-command"
+         data-answer="{{ include.answer }}">
+
+  <div class="question-label">
+    Try it yourself
+  </div>
+
+  <h3>{{ include.question }}</h3>
+
+  <div class="command-fill">
+
+    <code>{{ include.prefix }}</code>
+
+    <input
+      type="text"
+      class="fill-answer"
+      aria-label="{{ include.input_label }}"
+      autocomplete="off">
+
+    <code>{{ include.suffix }}</code>
+
+  </div>
+
+  <button type="button" class="check-question">
+    Check answer
+  </button>
+
+  <p class="question-feedback"
+     aria-live="polite"></p>
+
+</section>
