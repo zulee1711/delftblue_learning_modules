@@ -6,21 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* Statement */
 function initStatementQuestions() {
-  document.querySelectorAll(".statement-question").forEach((question) => {
+  const questions = document.querySelectorAll(".statement-question");
 
+  console.log("Statement questions found:", questions.length);
+
+  questions.forEach((question) => {
     const button = question.querySelector(".check-question");
     const feedback = question.querySelector(".question-feedback");
 
-    const correctTemplate = question.querySelector(".feedback-correct");
-    const incorrectTemplate = question.querySelector(".feedback-incorrect");
+    const correctTemplate =
+      question.querySelector(".feedback-correct");
+
+    const incorrectTemplate =
+      question.querySelector(".feedback-incorrect");
 
     if (!button || !feedback) {
-      console.error("Invalid statement question:", question);
+      console.error("Statement question is missing elements", question);
       return;
     }
 
     button.addEventListener("click", () => {
-
       const selected = question.querySelector(
         'input[type="radio"]:checked'
       );
@@ -49,29 +54,34 @@ function initStatementQuestions() {
           </div>
         `;
       }
-
     });
-
   });
 }
 
 /* Fill command */
 function initFillCommandQuestions() {
-  document.querySelectorAll(".fill-command").forEach((question) => {
+  const questions = document.querySelectorAll(".fill-command");
 
+  console.log("Fill questions found:", questions.length);
+
+  questions.forEach((question) => {
     const input = question.querySelector(".fill-answer");
     const button = question.querySelector(".check-question");
     const feedback = question.querySelector(".question-feedback");
 
     if (!input || !button || !feedback) {
-      console.error("Invalid fill-command question:", question);
+      console.error("Fill question is missing elements", question);
       return;
     }
 
-    const checkAnswer = () => {
+    function checkAnswer() {
+      const expected = question.dataset.answer
+        .trim()
+        .toLowerCase();
 
-      const expected = question.dataset.answer.trim().toLowerCase();
-      const answer = input.value.trim().toLowerCase();
+      const answer = input.value
+        .trim()
+        .toLowerCase();
 
       if (!answer) {
         feedback.innerHTML = `
@@ -91,7 +101,6 @@ function initFillCommandQuestions() {
 
         input.classList.remove("incorrect");
         input.classList.add("correct");
-
       } else {
         feedback.innerHTML = `
           <div class="feedback incorrect">
@@ -102,7 +111,7 @@ function initFillCommandQuestions() {
         input.classList.remove("correct");
         input.classList.add("incorrect");
       }
-    };
+    }
 
     button.addEventListener("click", checkAnswer);
 
@@ -111,31 +120,31 @@ function initFillCommandQuestions() {
         checkAnswer();
       }
     });
-
   });
 }
 
 /* Match */
 function initMatchQuestions() {
-  document.querySelectorAll(".match-question").forEach((question) => {
+  const questions = document.querySelectorAll(".match-question");
 
+  console.log("Match questions found:", questions.length);
+
+  questions.forEach((question) => {
     const button = question.querySelector(".check-match");
     const feedback = question.querySelector(".match-feedback");
 
     if (!button || !feedback) {
-      console.error("Invalid match question:", question);
+      console.error("Match question is missing elements", question);
       return;
     }
 
     button.addEventListener("click", () => {
-
       const rows = question.querySelectorAll(".match-row");
 
       let correct = 0;
       let answered = 0;
 
       rows.forEach((row) => {
-
         const select = row.querySelector(".match-select");
         const result = row.querySelector(".match-result");
 
@@ -153,7 +162,7 @@ function initMatchQuestions() {
         }
 
         answered += 1;
-
+        
         if (selected === expected) {
           correct += 1;
           result.textContent = "Correct";
