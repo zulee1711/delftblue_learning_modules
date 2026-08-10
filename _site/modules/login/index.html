@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Logging in to DelftBlue | DelftBlue Learning Module</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Logging in to DelftBlue" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/delftblue_learning_modules/modules/login/" />
+<meta property="og:url" content="http://localhost:4000/delftblue_learning_modules/modules/login/" />
+<meta property="og:site_name" content="DelftBlue Learning Module" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Logging in to DelftBlue" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Logging in to DelftBlue","url":"http://localhost:4000/delftblue_learning_modules/modules/login/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/delftblue_learning_modules/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/delftblue_learning_modules/feed.xml" title="DelftBlue Learning Module" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/delftblue_learning_modules/">DelftBlue Learning Module</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/delftblue_learning_modules/">DelftBlue Learning Modules</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <link
+  rel="stylesheet"
+  href="/delftblue_learning_modules/assets/css/course.css"
+>
+
+<link
+  rel="stylesheet"
+  href="/delftblue_learning_modules/assets/css/questions.css"
+>
+
+<main class="course-container">
+
+  <nav class="course-breadcrumb">
+    <a href="/delftblue_learning_modules/">DelftBlue Learning Modules</a>
+    <span> / </span>
+    <span>Logging in to DelftBlue</span>
+  </nav>
+
+  <article class="lesson-content">
+    <h1 id="logging-in-to-delftblue">Logging in to DelftBlue</h1>
+
+<p>DelftBlue is TU Delft’s high-performance computing system. You connect to it remotely from your computer.</p>
+
+<h2 id="learning-objectives">Learning objectives</h2>
+
+<p>By the end of this module, you will be able to:</p>
+
+<ul>
+  <li>Connect to DelftBlue using a terminal or SSH client</li>
+  <li>Recognize a successful login</li>
+  <li>Verify your username and current computer</li>
+  <li>Log out safely</li>
+</ul>
+
+<h2 id="before-you-begin">Before you begin</h2>
+
+<p>You need:</p>
+
+<ul>
+  <li>An active TU Delft NetID</li>
+  <li>An internet connection</li>
+  <li>Permission to access DelftBlue</li>
+</ul>
+
+<section class="question-block statement-question" data-correct="yes">
+
+  <div class="question-label">
+    Quick check
+  </div>
+
+  <h3>I already have DelftBlue access, or I have requested it.</h3>
+
+  <div class="question-options">
+
+    <label>
+      <input type="radio" name="delftblue-access" value="yes" />
+      Yes
+    </label>
+
+    <label>
+      <input type="radio" name="delftblue-access" value="no" />
+      No
+    </label>
+
+  </div>
+
+  <button type="button" class="check-question">
+    Check
+  </button>
+
+  <div class="question-feedback" aria-live="polite">
+  </div>
+
+    <template class="feedback-correct">
+      Great. You can continue with the connection steps.
+    </template>
+
+    <template class="feedback-incorrect">
+      Request DelftBlue access before continuing.
+   <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=5eecdac603ab4ca896e162836a215d64" target="_blank" rel="noopener">
+   Request DelftBlue access
+   </a> first.
+    </template>
+
+</section>
+
+<ul>
+  <li>Access to the TU Delft network or eduVPN</li>
+</ul>
+
+<section class="question-block statement-question" data-correct="yes">
+
+  <div class="question-label">
+    Quick check
+  </div>
+
+  <h3>I am on the TU Delft network, or I have connected to eduVPN.</h3>
+
+  <div class="question-options">
+
+    <label>
+      <input type="radio" name="network-access" value="yes" />
+      Yes
+    </label>
+
+    <label>
+      <input type="radio" name="network-access" value="no" />
+      No
+    </label>
+
+  </div>
+
+  <button type="button" class="check-question">
+    Check
+  </button>
+
+  <div class="question-feedback" aria-live="polite">
+  </div>
+
+    <template class="feedback-correct">
+      Great. Your network connection is ready.
+    </template>
+
+    <template class="feedback-incorrect">
+      You need to connect to the TU Delft network or eduVPN before accessing DelftBlue.
+    </template>
+
+</section>
+
+<ul>
+  <li>An SSH client</li>
+</ul>
+
+<h3 id="check-your-network-connection">Check your network connection</h3>
+
+<p>When you are on campus, connect through the TU Delft network.</p>
+
+<p>When you are off campus, connect to the TU Delft network using <a href="https://www.tudelft.nl/en/student/my-study-me/study-tools/remote-services">eduVPN</a> through <strong>Institute Access</strong>.</p>
+
+<section class="platform-selector" aria-labelledby="platform-heading">
+  <h2 id="platform-heading">Choose your operating system</h2>
+
+  <p>
+    Select the environment you will use to connect to DelftBlue.
+  </p>
+
+  <div class="platform-grid">
+
+    <a class="platform-card" href="/delftblue_learning_modules/modules/login/linux/">
+      <div class="platform-icon">🐧</div>
+      <div>
+        <strong>Linux</strong>
+        <span>Ubuntu, Fedora, Debian and other Linux systems</span>
+      </div>
+      <span class="platform-arrow">→</span>
+    </a>
+
+    <a class="platform-card" href="/delftblue_learning_modules/modules/login/macos/">
+      <div class="platform-icon">⌘</div>
+      <div>
+        <strong>macOS</strong>
+        <span>Use the Terminal application built into your Mac</span>
+      </div>
+      <span class="platform-arrow">→</span>
+    </a>
+
+    <a class="platform-card" href="/delftblue_learning_modules/modules/login/windows/">
+      <div class="platform-icon">⊞</div>
+      <div>
+        <strong>Windows</strong>
+        <span>Use Windows Terminal or PowerShell</span>
+      </div>
+      <span class="platform-arrow">→</span>
+    </a>
+
+    <a class="platform-card" href="/delftblue_learning_modules/modules/login/wsl/">
+      <div class="platform-icon">&gt;_</div>
+      <div>
+        <strong>Windows + WSL</strong>
+        <span>Use a Linux environment inside Windows</span>
+      </div>
+      <span class="platform-arrow">→</span>
+    </a>
+
+  </div>
+</section>
+
+  </article>
+
+</main>
+
+<script src="/delftblue_learning_modules/assets/js/course.js"></script>
+<script src="/delftblue_learning_modules/assets/js/questions.js"></script>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/delftblue_learning_modules/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DelftBlue Learning Module</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DelftBlue Learning Module</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

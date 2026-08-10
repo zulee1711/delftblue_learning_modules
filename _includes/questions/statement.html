@@ -31,14 +31,14 @@
 
   <div class="question-feedback"
        aria-live="polite">
-
-    <div class="feedback-correct">
-      {{ include.correct_feedback }}
-    </div>
-
-    <div class="feedback-incorrect">
-      {{ include.incorrect_feedback }}
-    </div>
-
   </div>
+
+    <template class="feedback-correct">
+      {{ include.correct_feedback }}
+    </template>
+
+    <template class="feedback-incorrect">
+      {{ include.incorrect_feedback }}
+    </template>
+
 </section>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Log in from macOS | DelftBlue Learning Module</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Log in from macOS" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/delftblue_learning_modules/modules/login/macos/" />
+<meta property="og:url" content="http://localhost:4000/delftblue_learning_modules/modules/login/macos/" />
+<meta property="og:site_name" content="DelftBlue Learning Module" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Log in from macOS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Log in from macOS","url":"http://localhost:4000/delftblue_learning_modules/modules/login/macos/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/delftblue_learning_modules/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/delftblue_learning_modules/feed.xml" title="DelftBlue Learning Module" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/delftblue_learning_modules/">DelftBlue Learning Module</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/delftblue_learning_modules/">DelftBlue Learning Modules</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <link
+  rel="stylesheet"
+  href="/delftblue_learning_modules/assets/css/course.css"
+>
+
+<link
+  rel="stylesheet"
+  href="/delftblue_learning_modules/assets/css/questions.css"
+>
+
+<main class="course-container">
+
+  <nav class="course-breadcrumb">
+    <a href="/delftblue_learning_modules/">DelftBlue Learning Modules</a>
+    <span> / </span>
+    <span>Log in from macOS</span>
+  </nav>
+
+  <article class="lesson-content">
+    <h1 id="log-in-from-macos">Log in from macOS</h1>
+
+<p>macOS includes both Terminal and an SSH client.</p>
+
+<h2 id="step-1-open-terminal">Step 1: Open Terminal</h2>
+
+<ol>
+  <li>Press <code class="language-plaintext highlighter-rouge">Command + Space</code>.</li>
+  <li>Enter <code class="language-plaintext highlighter-rouge">Terminal</code>.</li>
+  <li>Press Return.</li>
+</ol>
+
+<p>You can also find Terminal under:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Applications → Utilities → Terminal
+</code></pre></div></div>
+
+<p>Try it</p>
+
+<div class="command-block">
+  
+    <p>Displays your local macOS username.</p>
+  
+
+  <div class="command-row">
+    <code>whoami</code>
+
+    <button type="button" class="copy-command" data-command="whoami" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<h2 id="step-2-check-ssh">Step 2: Check SSH</h2>
+<div class="command-block">
+  
+    <p>Confirms that the SSH client is available.</p>
+  
+
+  <div class="command-row">
+    <code>ssh -V</code>
+
+    <button type="button" class="copy-command" data-command="ssh -V" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<h2 id="step-3-connect-to-delftblue">Step 3: Connect to DelftBlue</h2>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>ssh &lt;netid&gt;@login.delftblue.tudelft.nl</code>
+
+    <button type="button" class="copy-command" data-command="ssh &lt;netid&gt;@login.delftblue.tudelft.nl" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>Replace <code class="language-plaintext highlighter-rouge">&lt;netid&gt;</code> with your TU Delft NetID.</p>
+
+<section class="question-block fill-command" data-answer="jstudent">
+
+  <div class="question-label">
+    Try it yourself
+  </div>
+
+  <h3>Complete the command using `jstudent` as the NetID.</h3>
+
+  <div class="command-fill">
+
+    <code>ssh </code>
+
+    <input type="text" class="fill-answer" aria-label="NetID" autocomplete="off" />
+
+    <code>@login.delftblue.tudelft.nl</code>
+
+  </div>
+
+  <button type="button" class="check-question">
+    Check answer
+  </button>
+
+  <p class="question-feedback" aria-live="polite"></p>
+
+</section>
+
+<h2 id="step-4-confirm-the-host">Step 4: Confirm the host</h2>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>pwd</code>
+
+    <button type="button" class="copy-command" data-command="pwd" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>The first time you connect, you may see a message similar to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The authenticity of host 'login.delftblue.tudelft.nl' cannot be established.
+Are you sure you want to continue connecting?
+</code></pre></div></div>
+
+<p>Check that the hostname is exactly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>login.delftblue.tudelft.nl
+</code></pre></div></div>
+
+<p>Then press <code class="language-plaintext highlighter-rouge">yes</code> and Enter to continue.</p>
+
+<blockquote>
+  <p>[<strong>NOTE</strong>]</p>
+
+  <p>Only accept a host when the hostname is correct. If the hostname is incorrect, stop and ask for assistance.</p>
+</blockquote>
+
+<h2 id="step-5-enter-your-password">Step 5: Enter your password</h2>
+
+<p>Enter your NetID password and press Enter.</p>
+
+<blockquote>
+  <p>[<strong>NOTE</strong>]</p>
+
+  <p>The terminal will not display any characters while you type your password. This is normal, and is designed to increase security, so that people watching over your shoulder don’t even know how many characters your password contains.</p>
+</blockquote>
+
+<h2 id="step-6-recognize-a-successful-login">Step 6: Recognize a successful login</h2>
+
+<p>After a successful login, you will see a welcome message similar to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>____       ________  ____  __
+   / __ \___  / / __/ /_/ __ )/ /_  _____
+  / / / / _ \/ / /_/ __/ __  / / / / / _ \
+ / /_/ /  __/ / __/ /_/ /_/ / / /_/ /  __/
+/_____/\___/_/_/  \__/_____/_/\__,_/\___/
+
+As DelftBlue is a new system and was newly installed and configured, some things might not be fully working yet, and are still in the process of being set up.
+
+For information about using DelftBlue, see the documentation: https://www.tudelft.nl/dhpc/documentation (login using your TU Delft account)
+When you have questions, you can ask them in the DHPC chat service: https://mattermost.tudelft.nl/dhpc/ (login using your TU Delft account)
+
+Last login: Thu Jul 21 16:56:39 2022 from 145.90.36.181
+
+
+Quota information for storage pool scratch (ID: 1):
+
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+      &lt;netid&gt;|588559||   20.63 GiB|    5.00 TiB||   278772|  1000000
+
+Quota information for storage pool home (ID: 2):
+
+      user/group     ||           size          ||    chunk files
+     name     |  id  ||    used    |    hard    ||  used   |  hard
+--------------|------||------------|------------||---------|---------
+      &lt;netid&gt;|588559||    3.44 GiB|    8.00 GiB||    48433|  1000000
+
+ 11:54:16 up 48 days, 19:22,  6 users,  load average: 0.09, 0.20, 0.15
+
+ [&lt;netid&gt;@login04 ~]$
+</code></pre></div></div>
+
+<p>The exact login-node number may be different.</p>
+
+<p>You are now connected to a DelftBlue login node.</p>
+
+<blockquote>
+  <p>[<strong>IMPORTANT</strong>]</p>
+
+  <p>Login nodes are intended for preparing files, managing jobs, and doing light work. Computationally intensive programs must be submitted as jobs.</p>
+</blockquote>
+
+<h2 id="step-7-verify-your-session">Step 7: Verify your session</h2>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>whoami</code>
+
+    <button type="button" class="copy-command" data-command="whoami" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>The output should be your NetID.</p>
+
+<p>Next, run:</p>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>hostname</code>
+
+    <button type="button" class="copy-command" data-command="hostname" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>The output should be the name of the login node you are connected to, for example <code class="language-plaintext highlighter-rouge">login04</code>.</p>
+
+<p>Finally, run:</p>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>pwd</code>
+
+    <button type="button" class="copy-command" data-command="pwd" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>The output should be your home directory, for example <code class="language-plaintext highlighter-rouge">/home/&lt;netid&gt;</code>.</p>
+
+<section class="question-block match-question">
+
+  <div class="question-label">
+    Match
+  </div>
+
+  <h3>What does each part of this DelftBlue prompt mean?</h3>
+
+  
+    <p>Match each part of [jstudent@login04 ~]$ to its meaning.</p>
+  
+
+  <div class="match-grid">
+
+    <div class="match-row" data-answer="a">
+
+      <code class="match-item">
+        jstudent
+      </code>
+
+      <select class="match-select" aria-label="Match jstudent">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          Your TU Delft NetID
+        </option>
+
+        <option value="b">
+          The DelftBlue login node
+        </option>
+
+        <option value="c">
+          Your home directory
+        </option>
+
+      </select>
+
+      <span class="match-result" aria-live="polite"></span>
+
+    </div>
+
+
+    <div class="match-row" data-answer="b">
+
+      <code class="match-item">
+        login04
+      </code>
+
+      <select class="match-select" aria-label="Match login04">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          Your TU Delft NetID
+        </option>
+
+        <option value="b">
+          The DelftBlue login node
+        </option>
+
+        <option value="c">
+          Your home directory
+        </option>
+
+      </select>
+
+      <span class="match-result" aria-live="polite"></span>
+
+    </div>
+
+
+    <div class="match-row" data-answer="c">
+
+      <code class="match-item">
+        ~
+      </code>
+
+      <select class="match-select" aria-label="Match ~">
+
+        <option value="">Choose...</option>
+
+        <option value="a">
+          Your TU Delft NetID
+        </option>
+
+        <option value="b">
+          The DelftBlue login node
+        </option>
+
+        <option value="c">
+          Your home directory
+        </option>
+
+      </select>
+
+      <span class="match-result" aria-live="polite"></span>
+
+    </div>
+
+  </div>
+
+  <button type="button" class="check-match">
+    Check answers
+  </button>
+
+  <p class="match-feedback" aria-live="polite"></p>
+
+</section>
+
+<h2 id="step-8-log-out-safely">Step 8: Log out safely</h2>
+
+<p>When you are finished, log out by typing:</p>
+
+<div class="command-block">
+  
+
+  <div class="command-row">
+    <code>exit</code>
+
+    <button type="button" class="copy-command" data-command="exit" aria-label="Copy command">
+      Copy
+    </button>
+  </div>
+
+  <p class="copy-status" aria-live="polite"></p>
+</div>
+
+<p>You can also press:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ctrl + D
+</code></pre></div></div>
+
+<p>You should return to the terminal on your own computer.</p>
+
+  </article>
+
+</main>
+
+<script src="/delftblue_learning_modules/assets/js/course.js"></script>
+<script src="/delftblue_learning_modules/assets/js/questions.js"></script>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/delftblue_learning_modules/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DelftBlue Learning Module</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DelftBlue Learning Module</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

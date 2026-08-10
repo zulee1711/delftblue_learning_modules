@@ -27,20 +27,24 @@ You need:
 - Permission to access DelftBlue
 
 {% include questions/statement.html
-   id="account-check"
+   id="delftblue-access"
    question="I already have DelftBlue access, or I have requested it."
    correct="yes"
    correct_feedback="Great. You can continue with the connection steps."
-   incorrect_feedback="Request DelftBlue access before continuing with this tutorial (request via [DelftBlue Access Request Form](https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=5eecdac603ab4ca896e162836a215d64))"
+   incorrect_feedback='Request DelftBlue access before continuing.
+   <a href="https://tudelft.topdesk.net/tas/public/ssp/content/serviceflow?unid=5eecdac603ab4ca896e162836a215d64"
+   target="_blank" rel="noopener">
+   Request DelftBlue access
+   </a> first.'
 %}
 
 - Access to the TU Delft network or eduVPN
 
 {% include questions/statement.html
-   id="vpn-check"
-   question="I have access to the TU Delft network or eduVPN."
+   id="network-access"
+   question="I am on the TU Delft network, or I have connected to eduVPN."
    correct="yes"
-   correct_feedback="Great. You can continue with the connection steps."
+   correct_feedback="Great. Your network connection is ready."
    incorrect_feedback="You need to connect to the TU Delft network or eduVPN before accessing DelftBlue."
 %}
 
