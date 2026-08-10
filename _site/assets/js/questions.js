@@ -119,60 +119,67 @@ function initFillCommandQuestions() {
 function initMatchQuestions() {
   document.querySelectorAll(".match-question").forEach((question) => {
 
-  const button = question.querySelector(".check-match");
-  const feedback = question.querySelector(".match-feedback");
+    const button = question.querySelector(".check-match");
+    const feedback = question.querySelector(".match-feedback");
 
-  button.addEventListener("click", () => {
+    if (!button || !feedback) {
+      console.error("Invalid match question:", question);
+      return;
+    }
 
-    const rows = question.querySelectorAll(".match-row");
+    button.addEventListener("click", () => {
 
-    let correct = 0;
-    let answered = 0;
+      const rows = question.querySelectorAll(".match-row");
 
-    rows.forEach((row) => {
+      let correct = 0;
+      let answered = 0;
 
-      const select = row.querySelector(".match-select");
-      const result = row.querySelector(".match-result");
+      rows.forEach((row) => {
 
-      const expected = row.dataset.answer;
-      const selected = select.value;
+        const select = row.querySelector(".match-select");
+        const result = row.querySelector(".match-result");
 
-      result.textContent = "";
+        const expected = row.dataset.answer;
+        const selected = select.value;
 
-      if (!selected) {
-        result.textContent = "Choose an answer.";
+        result.textContent = "";
+
+        row.classList.remove("correct");
+        row.classList.remove("incorrect");
+
+        if (!selected) {
+          result.textContent = "Choose an answer.";
+          return;
+        }
+
+        answered += 1;
+
+        if (selected === expected) {
+          correct += 1;
+          result.textContent = "Correct";
+          row.classList.add("correct");
+        } else {
+          result.textContent = "Try again";
+          row.classList.add("incorrect");
+        }
+
+      });
+
+      if (answered < rows.length) {
+        feedback.textContent =
+          "Complete all matches before checking.";
         return;
       }
 
-      answered += 1;
-
-      if (selected === expected) {
-          correct += 1;
-          result.textContent = "Correct!";
-          row.classList.remove("Incorrect");
-          row.classList.add("Correct");
+      if (correct === rows.length) {
+        feedback.textContent =
+          "Correct — you identified all parts of the DelftBlue prompt.";
       } else {
-          result.textContent = "Wrong Answer!";
-          row.classList.remove("Correct");
-          row.classList.add("Incorrect");
+        feedback.textContent =
+          `${correct} of ${rows.length} correct. Try again.`;
       }
 
     });
 
-    if (answered < rows.length) {
-      feedback.textContent =
-        "Complete all matches before checking.";
-      return;
-    }
-
-    if (correct === rows.length) {
-      feedback.textContent =
-        "Correct — you can identify the parts of the DelftBlue prompt.";
-    } else {
-      feedback.textContent =
-        `${correct} of ${rows.length} correct. Try again.`;
-    }
-
   });
-
-});
+}
